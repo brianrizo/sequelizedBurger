@@ -1,0 +1,12 @@
+INSERT INTO burger (burger_name, devoured) VALUES ('Shroom Swiss', true);
+INSERT INTO burger (burger_name, devoured) VALUES ('Sunrise Special', true);
+INSERT INTO burger (burger_name, devoured) VALUES ('Deluxe', true);
+INSERT INTO burger (burger_name, devoured) VALUES ('Baconator Burger', false);
+INSERT INTO burger (burger_name, devoured) VALUES ('Vegan', true);
+INSERT INTO burger (burger_name, devoured) VALUES ('Whopper', false);
+INSERT INTO burger (burger_name, devoured) VALUES ('Turkey Burger', true);
+INSERT INTO burger (burger_name, devoured) VALUES ('Old Timer', false);
+INSERT INTO burger (burger_name, devoured) VALUES ('BBQ Burger', true);
+INSERT INTO burger (burger_name, devoured) VALUES ('Bison Burger', false);
+INSERT INTO burger (burger_name, devoured) VALUES ('Sliders', false);
+INSERT INTO burger (burger_name, devoured) VALUES ('Big Mac', true);
