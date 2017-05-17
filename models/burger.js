@@ -1,29 +1,21 @@
-// Import the ORM to create functions that will interact with the database.
-var orm = require("../config/orm.js");
+// Burger models
 
-var burger = {
-  all: function(cb) {
-    orm.all("burger", function(res) {
-      cb(res);
-    });
-  },
-  // The variables cols and vals are arrays.
-  create: function(cols, vals, cb) {
-    orm.create("burger", cols, vals, function(res) {
-      cb(res);
-    });
-  },
-  update: function(objColVals, condition, cb) {
-    orm.update("burger", objColVals, condition, function(res) {
-      cb(res);
-    });
-  },
-  delete: function(condition, cb) {
-    orm.delete("burger", condition, function(res) {
-      cb(res);
-    });
-  }
+// The burger has a burger_name attribute of type DataTypes.String
+// and a devoured attribute that is false by default
+
+module.exports = function(sequelize, DataTypes) {
+  var Burger = sequelize.define("Burger", {
+    burger_name: DataTypes.STRING,
+    devoured: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: false
+    }
+  }, {
+    classMethods: {
+      associate: function(models) {
+        // associations can be defined here
+      }
+    }
+  });
+  return Burger;
 };
-
-// Export the database functions for the controller (catsController.js).
-module.exports = burger;
